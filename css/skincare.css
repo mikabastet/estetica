@@ -1,0 +1,186 @@
+:root {
+    --rosa-logo: #E8C1BB;
+    --verde-salvia: #BFC7B2;
+    --crema: #F5F2EB;
+    --gris-oscuro: #4A4A4A;
+    --oro: #A69277;
+    --blanco: #FFFFFF;
+}
+
+body {
+    margin: 0;
+    font-family: 'Lato', sans-serif;
+    background-color: var(--blanco);
+    color: var(--gris-oscuro);
+}
+
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Nav */
+.simple-nav {
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid var(--crema);
+}
+
+.simple-nav a {
+    text-decoration: none;
+    color: var(--oro);
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* Hero Section */
+.product-hero {
+    padding: 80px 0;
+}
+
+.hero-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    align-items: center;
+}
+
+.product-image-main img {
+    width: 100%;
+    border-radius: 2px;
+    box-shadow: 20px 20px 0px var(--rosa-logo);
+}
+
+.product-desc h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 3rem;
+    line-height: 1.2;
+    margin: 15px 0;
+}
+
+.tag {
+    color: var(--verde-salvia);
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    font-size: 0.8rem;
+}
+
+.description-text {
+    font-size: 1.1rem;
+    margin-bottom: 30px;
+    color: #666;
+}
+
+.product-features {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 40px;
+}
+
+.product-features li {
+    margin-bottom: 10px;
+    padding-left: 25px;
+    position: relative;
+}
+
+.product-features li::before {
+    content: '✔';
+    position: absolute;
+    left: 0;
+    color: var(--verde-salvia);
+}
+
+/* Botón WhatsApp */
+.btn-whatsapp {
+    display: inline-block;
+    padding: 18px 35px;
+    background-color: var(--gris-oscuro);
+    color: white;
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: bold;
+    font-size: 0.9rem;
+    transition: background 0.3s;
+}
+
+.btn-whatsapp:hover {
+    background-color: var(--oro);
+}
+
+/* Diferenciadores */
+.why-us {
+    background-color: var(--crema);
+    padding: 100px 0;
+}
+
+.section-title {
+    text-align: center;
+    font-family: 'Playfair Display', serif;
+    font-size: 2.5rem;
+    margin-bottom: 60px;
+}
+
+.diff-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+}
+
+.diff-item {
+    text-align: center;
+}
+
+.number {
+    font-family: 'Playfair Display', serif;
+    font-size: 3rem;
+    color: var(--rosa-logo);
+    display: block;
+    margin-bottom: 10px;
+}
+
+.diff-item h3 {
+    text-transform: uppercase;
+    font-size: 1.1rem;
+    margin-bottom: 15px;
+    letter-spacing: 1px;
+}
+
+.diff-item p {
+    font-size: 0.9rem;
+    line-height: 1.8;
+    color: #777;
+}
+
+/* Detalle Row */
+.detail-row {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+    padding: 100px 0;
+}
+
+.detail-text { flex: 1; }
+.detail-img { flex: 1; }
+.detail-img img { width: 100%; height: 400px; object-fit: cover; }
+
+.skincare-footer {
+    text-align: center;
+    padding: 50px;
+    background: white;
+    font-size: 0.8rem;
+    color: var(--oro);
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+    .hero-grid, .diff-grid, .detail-row {
+        grid-template-columns: 1fr;
+        flex-direction: column;
+    }
+    .product-desc h1 { font-size: 2rem; }
+}
